@@ -15,6 +15,7 @@ var input string
 
 var solvers = map[uint]func(string) error{
 	1: solver.SolveDay1,
+	2: solver.SolveDay2,
 }
 
 func init() {
@@ -34,9 +35,9 @@ func main() {
 		fmt.Printf("Solver for day %d not found\n", day)
 	}
 	if utils.EnableLogging {
-		fmt.Println("Loging is enabled")
+		fmt.Println("Logging is enabled")
 	} else {
-		fmt.Println("Loging is disabled")
+		fmt.Println("Logging is disabled")
 	}
 	fmt.Printf("Using solver for day %d, input is provided from %s\n", day, file)
 
