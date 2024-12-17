@@ -9,7 +9,7 @@ import (
 	"github.com/qluan1/adventofcode2024/utils"
 )
 
-func firstPart(input string) (string, error) {
+func d1FirstPart(input string) (string, error) {
 	column1 := []int{}
 	column2 := []int{}
 	for _, line := range strings.Split(input, "\n") {
@@ -27,7 +27,7 @@ func firstPart(input string) (string, error) {
 	return strconv.Itoa(res), nil
 }
 
-func secondPart(input string) (string, error) {
+func d1SecondPart(input string) (string, error) {
 	column1 := []int{}
 	count := make(map[int]int)
 	for _, line := range strings.Split(input, "\n") {
@@ -43,11 +43,11 @@ func secondPart(input string) (string, error) {
 }
 
 func SolveDay1(input string) error {
-	s1, err := firstPart(input)
+	s1, err := d1FirstPart(input)
 	if err != nil {
 		return err
 	}
-	s2, err := secondPart(input)
+	s2, err := d1SecondPart(input)
 	if err != nil {
 		return err
 	}
