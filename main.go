@@ -21,6 +21,7 @@ var solvers = map[uint]func(string) error{
 	5: solver.SolveDay5,
 	6: solver.SolveDay6,
 	7: solver.SolveDay7,
+	8: solver.SolveDay8,
 }
 
 func init() {

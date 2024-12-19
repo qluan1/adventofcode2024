@@ -87,3 +87,19 @@ func GetStrMat(m, n int) [][]string {
 	}
 	return res
 }
+
+func Gcd(a, b int) int {
+	if a == 0 || b == 0 {
+		return 0
+	}
+	if a < 0 || b < 0 {
+		return Gcd(Abs(a), Abs(b))
+	}
+	if a < b {
+		return Gcd(b, a)
+	}
+	if b == 1 {
+		return 1
+	}
+	return Gcd(b, a%b)
+}
