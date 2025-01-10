@@ -103,3 +103,17 @@ func Gcd(a, b int) int {
 	}
 	return Gcd(b, a%b)
 }
+
+func Pow(base, exp int) int {
+	if exp == 0 {
+		return 1
+	}
+	if exp == 1 {
+		return base
+	}
+	res := Pow(base, exp/2)
+	if exp%2 == 0 {
+		return res * res
+	}
+	return res * res * base
+}
